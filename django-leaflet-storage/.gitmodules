@@ -1,0 +1,3 @@
+[submodule "leaflet_storage/static/storage"]
+	path = leaflet_storage/static/storage
+	url = git://github.com/yohanboniface/Leaflet.Storage.git

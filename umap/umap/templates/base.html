@@ -1,0 +1,51 @@
+{% load compress umap_tags i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block head_title %}uMap{% endblock %}</title>
+    <meta charset="utf-8">
+    {% compress css %}
+    <!-- Included CSS Files (Compressed) -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}storage/contrib/css/storage.ui.default.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}umap/umap.css">
+    {% endcompress css %}
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% block extra_head %}
+    {% endblock extra_head %}
+    {% compress js %}
+    <script src="{{ STATIC_URL }}umap/js/autocomplete.js"></script>
+    {% endcompress js %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <div id="storage-ui-container"></div>
+    <div id="storage-alert-container"></div>
+    <div id="storage-tooltip-container"></div>
+
+    {% block header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block bottom_js %}
+        <script type="text/javascript">
+            L.S.on('ui:ready', function () {
+                L.S.AutoComplete.multiSelect('id_editors', {
+                    placeholder: "{% trans 'Type editors nick to add…' %}"
+                });
+                L.S.AutoComplete.select('id_owner', {
+                    placeholder: "{% trans 'Type new owner nick…' %}"
+                });
+            });
+        </script>
+    {% endblock %}
+    {% block footer %}
+        {% include "umap/footer.html" %}
+    {% endblock footer %}
+</body>
+</html>

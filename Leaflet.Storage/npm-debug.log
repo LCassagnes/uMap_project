@@ -1,0 +1,490 @@
+info it worked if it ends with ok
+verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+info using npm@1.1.4
+info using node@v0.6.19
+verbose config file /root/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose caching /home/pi/dev/umapproject/Leaflet.Storage/package.json
+verbose loadDefaults leaflet-storage@0.7.6
+verbose readDependencies: using package.json deps
+verbose where, deps [ '/home/pi/dev/umapproject/Leaflet.Storage',
+verbose where, deps   [ 'csv2geojson',
+verbose where, deps     'georsstogeojson',
+verbose where, deps     'heat',
+verbose where, deps     'label',
+verbose where, deps     'leaflet',
+verbose where, deps     'leaflet-editinosm',
+verbose where, deps     'leaflet-hash',
+verbose where, deps     'leaflet-i18n',
+verbose where, deps     'leaflet.markercluster',
+verbose where, deps     'leaflet-draw',
+verbose where, deps     'minimap',
+verbose where, deps     'osmtogeojson',
+verbose where, deps     'togeojson',
+verbose where, deps     'togpx',
+verbose where, deps     'leaflet-editable',
+verbose where, deps     'chai',
+verbose where, deps     'grunt',
+verbose where, deps     'grunt-contrib-concat',
+verbose where, deps     'grunt-contrib-copy',
+verbose where, deps     'happen',
+verbose where, deps     'mocha',
+verbose where, deps     'napa',
+verbose where, deps     'optimist',
+verbose where, deps     'sinon',
+verbose where, deps     'uglify-js' ] ]
+verbose from cache /home/pi/dev/umapproject/Leaflet.Storage/package.json
+info preinstall leaflet-storage@0.7.6
+verbose from cache /home/pi/dev/umapproject/Leaflet.Storage/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'csv2geojson@^3.7.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'csv2geojson@^3.7.0',
+silly cache add: name, spec, args   [ 'csv2geojson@^3.7.0', null ] ]
+verbose parsed url { pathname: 'csv2geojson@^3.7.0',
+verbose parsed url   path: 'csv2geojson@^3.7.0',
+verbose parsed url   href: 'csv2geojson@^3.7.0' }
+silly cache add: name, spec, args [ 'csv2geojson', '^3.7.0', [ 'csv2geojson', '^3.7.0' ] ]
+verbose parsed url { pathname: '^3.7.0', path: '^3.7.0', href: '^3.7.0' }
+verbose addNamed [ 'csv2geojson', '^3.7.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'csv2geojson', '^3.7.0' ]
+verbose cache add [ 'georsstogeojson@^0.0.2', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'georsstogeojson@^0.0.2',
+silly cache add: name, spec, args   [ 'georsstogeojson@^0.0.2', null ] ]
+verbose parsed url { pathname: 'georsstogeojson@^0.0.2',
+verbose parsed url   path: 'georsstogeojson@^0.0.2',
+verbose parsed url   href: 'georsstogeojson@^0.0.2' }
+silly cache add: name, spec, args [ 'georsstogeojson', '^0.0.2', [ 'georsstogeojson', '^0.0.2' ] ]
+verbose parsed url { pathname: '^0.0.2', path: '^0.0.2', href: '^0.0.2' }
+verbose addNamed [ 'georsstogeojson', '^0.0.2' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'georsstogeojson', '^0.0.2' ]
+verbose cache add [ 'heat@git+https://github.com/Leaflet/Leaflet.heat.git#gh-pages',
+verbose cache add   null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'heat@git+https://github.com/Leaflet/Leaflet.heat.git#gh-pages',
+silly cache add: name, spec, args   [ 'heat@git+https://github.com/Leaflet/Leaflet.heat.git#gh-pages',
+silly cache add: name, spec, args     null ] ]
+verbose parsed url { hash: '#gh-pages',
+verbose parsed url   pathname: 'heat@git+https://github.com/Leaflet/Leaflet.heat.git',
+verbose parsed url   path: 'heat@git+https://github.com/Leaflet/Leaflet.heat.git',
+verbose parsed url   href: 'heat@git+https://github.com/Leaflet/Leaflet.heat.git#gh-pages' }
+silly cache add: name, spec, args [ 'heat',
+silly cache add: name, spec, args   'git+https://github.com/Leaflet/Leaflet.heat.git#gh-pages',
+silly cache add: name, spec, args   [ 'heat',
+silly cache add: name, spec, args     'git+https://github.com/Leaflet/Leaflet.heat.git#gh-pages' ] ]
+verbose parsed url { protocol: 'githttps:',
+verbose parsed url   slashes: true,
+verbose parsed url   host: 'github.com',
+verbose parsed url   hostname: 'github.com',
+verbose parsed url   href: 'githttps://github.com/Leaflet/Leaflet.heat.git#gh-pages',
+verbose parsed url   hash: '#gh-pages',
+verbose parsed url   pathname: '/Leaflet/Leaflet.heat.git',
+verbose parsed url   path: '/Leaflet/Leaflet.heat.git' }
+verbose addRemoteGit [ 'https://github.com/Leaflet/Leaflet.heat.git', 'gh-pages' ]
+verbose cache add [ 'label@git+https://github.com/Leaflet/Leaflet.label.git#0.2.1',
+verbose cache add   null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'label@git+https://github.com/Leaflet/Leaflet.label.git#0.2.1',
+silly cache add: name, spec, args   [ 'label@git+https://github.com/Leaflet/Leaflet.label.git#0.2.1',
+silly cache add: name, spec, args     null ] ]
+verbose parsed url { hash: '#0.2.1',
+verbose parsed url   pathname: 'label@git+https://github.com/Leaflet/Leaflet.label.git',
+verbose parsed url   path: 'label@git+https://github.com/Leaflet/Leaflet.label.git',
+verbose parsed url   href: 'label@git+https://github.com/Leaflet/Leaflet.label.git#0.2.1' }
+silly cache add: name, spec, args [ 'label',
+silly cache add: name, spec, args   'git+https://github.com/Leaflet/Leaflet.label.git#0.2.1',
+silly cache add: name, spec, args   [ 'label',
+silly cache add: name, spec, args     'git+https://github.com/Leaflet/Leaflet.label.git#0.2.1' ] ]
+verbose parsed url { protocol: 'githttps:',
+verbose parsed url   slashes: true,
+verbose parsed url   host: 'github.com',
+verbose parsed url   hostname: 'github.com',
+verbose parsed url   href: 'githttps://github.com/Leaflet/Leaflet.label.git#0.2.1',
+verbose parsed url   hash: '#0.2.1',
+verbose parsed url   pathname: '/Leaflet/Leaflet.label.git',
+verbose parsed url   path: '/Leaflet/Leaflet.label.git' }
+verbose addRemoteGit [ 'https://github.com/Leaflet/Leaflet.label.git', '0.2.1' ]
+verbose cache add [ 'leaflet@^0.7.3', null ]
+silly cache add: name, spec, args [ undefined, 'leaflet@^0.7.3', [ 'leaflet@^0.7.3', null ] ]
+verbose parsed url { pathname: 'leaflet@^0.7.3',
+verbose parsed url   path: 'leaflet@^0.7.3',
+verbose parsed url   href: 'leaflet@^0.7.3' }
+silly cache add: name, spec, args [ 'leaflet', '^0.7.3', [ 'leaflet', '^0.7.3' ] ]
+verbose parsed url { pathname: '^0.7.3', path: '^0.7.3', href: '^0.7.3' }
+verbose addNamed [ 'leaflet', '^0.7.3' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'leaflet', '^0.7.3' ]
+verbose cache add [ 'leaflet-editinosm@0.1.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'leaflet-editinosm@0.1.0',
+silly cache add: name, spec, args   [ 'leaflet-editinosm@0.1.0', null ] ]
+verbose parsed url { pathname: 'leaflet-editinosm@0.1.0',
+verbose parsed url   path: 'leaflet-editinosm@0.1.0',
+verbose parsed url   href: 'leaflet-editinosm@0.1.0' }
+silly cache add: name, spec, args [ 'leaflet-editinosm',
+silly cache add: name, spec, args   '0.1.0',
+silly cache add: name, spec, args   [ 'leaflet-editinosm', '0.1.0' ] ]
+verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+verbose addNamed [ 'leaflet-editinosm', '0.1.0' ]
+verbose addNamed [ '0.1.0', '0.1.0' ]
+verbose cache add [ 'leaflet-hash@^0.2.1', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'leaflet-hash@^0.2.1',
+silly cache add: name, spec, args   [ 'leaflet-hash@^0.2.1', null ] ]
+verbose parsed url { pathname: 'leaflet-hash@^0.2.1',
+verbose parsed url   path: 'leaflet-hash@^0.2.1',
+verbose parsed url   href: 'leaflet-hash@^0.2.1' }
+silly cache add: name, spec, args [ 'leaflet-hash', '^0.2.1', [ 'leaflet-hash', '^0.2.1' ] ]
+verbose parsed url { pathname: '^0.2.1', path: '^0.2.1', href: '^0.2.1' }
+verbose addNamed [ 'leaflet-hash', '^0.2.1' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'leaflet-hash', '^0.2.1' ]
+verbose cache add [ 'leaflet-i18n@0.1.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'leaflet-i18n@0.1.0',
+silly cache add: name, spec, args   [ 'leaflet-i18n@0.1.0', null ] ]
+verbose parsed url { pathname: 'leaflet-i18n@0.1.0',
+verbose parsed url   path: 'leaflet-i18n@0.1.0',
+verbose parsed url   href: 'leaflet-i18n@0.1.0' }
+silly cache add: name, spec, args [ 'leaflet-i18n', '0.1.0', [ 'leaflet-i18n', '0.1.0' ] ]
+verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+verbose addNamed [ 'leaflet-i18n', '0.1.0' ]
+verbose addNamed [ '0.1.0', '0.1.0' ]
+verbose raw, before any munging csv2geojson
+verbose url resolving [ 'https://registry.npmjs.org/', './csv2geojson' ]
+verbose url resolved https://registry.npmjs.org/csv2geojson
+http GET https://registry.npmjs.org/csv2geojson
+verbose raw, before any munging georsstogeojson
+verbose url resolving [ 'https://registry.npmjs.org/', './georsstogeojson' ]
+verbose url resolved https://registry.npmjs.org/georsstogeojson
+http GET https://registry.npmjs.org/georsstogeojson
+verbose raw, before any munging leaflet
+verbose url resolving [ 'https://registry.npmjs.org/', './leaflet' ]
+verbose url resolved https://registry.npmjs.org/leaflet
+http GET https://registry.npmjs.org/leaflet
+verbose raw, before any munging leaflet-editinosm/0.1.0
+verbose url resolving [ 'https://registry.npmjs.org/', './leaflet-editinosm/0.1.0' ]
+verbose url resolved https://registry.npmjs.org/leaflet-editinosm/0.1.0
+http GET https://registry.npmjs.org/leaflet-editinosm/0.1.0
+verbose raw, before any munging leaflet-hash
+verbose url resolving [ 'https://registry.npmjs.org/', './leaflet-hash' ]
+verbose url resolved https://registry.npmjs.org/leaflet-hash
+http GET https://registry.npmjs.org/leaflet-hash
+verbose raw, before any munging leaflet-i18n/0.1.0
+verbose url resolving [ 'https://registry.npmjs.org/', './leaflet-i18n/0.1.0' ]
+verbose url resolved https://registry.npmjs.org/leaflet-i18n/0.1.0
+http GET https://registry.npmjs.org/leaflet-i18n/0.1.0
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1430383680639'
+verbose cache add [ 'leaflet.markercluster@^0.4.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'leaflet.markercluster@^0.4.0',
+silly cache add: name, spec, args   [ 'leaflet.markercluster@^0.4.0', null ] ]
+verbose parsed url { pathname: 'leaflet.markercluster@^0.4.0',
+verbose parsed url   path: 'leaflet.markercluster@^0.4.0',
+verbose parsed url   href: 'leaflet.markercluster@^0.4.0' }
+silly cache add: name, spec, args [ 'leaflet.markercluster',
+silly cache add: name, spec, args   '^0.4.0',
+silly cache add: name, spec, args   [ 'leaflet.markercluster', '^0.4.0' ] ]
+verbose parsed url { pathname: '^0.4.0', path: '^0.4.0', href: '^0.4.0' }
+verbose addNamed [ 'leaflet.markercluster', '^0.4.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'leaflet.markercluster', '^0.4.0' ]
+verbose cache add [ 'leaflet-draw@^0.2.3', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'leaflet-draw@^0.2.3',
+silly cache add: name, spec, args   [ 'leaflet-draw@^0.2.3', null ] ]
+verbose parsed url { pathname: 'leaflet-draw@^0.2.3',
+verbose parsed url   path: 'leaflet-draw@^0.2.3',
+verbose parsed url   href: 'leaflet-draw@^0.2.3' }
+silly cache add: name, spec, args [ 'leaflet-draw', '^0.2.3', [ 'leaflet-draw', '^0.2.3' ] ]
+verbose parsed url { pathname: '^0.2.3', path: '^0.2.3', href: '^0.2.3' }
+verbose addNamed [ 'leaflet-draw', '^0.2.3' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'leaflet-draw', '^0.2.3' ]
+verbose cache add [ 'minimap@git+https://github.com/Norkart/Leaflet-MiniMap.git#v1.0.0',
+verbose cache add   null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'minimap@git+https://github.com/Norkart/Leaflet-MiniMap.git#v1.0.0',
+silly cache add: name, spec, args   [ 'minimap@git+https://github.com/Norkart/Leaflet-MiniMap.git#v1.0.0',
+silly cache add: name, spec, args     null ] ]
+verbose parsed url { hash: '#v1.0.0',
+verbose parsed url   pathname: 'minimap@git+https://github.com/Norkart/Leaflet-MiniMap.git',
+verbose parsed url   path: 'minimap@git+https://github.com/Norkart/Leaflet-MiniMap.git',
+verbose parsed url   href: 'minimap@git+https://github.com/Norkart/Leaflet-MiniMap.git#v1.0.0' }
+silly cache add: name, spec, args [ 'minimap',
+silly cache add: name, spec, args   'git+https://github.com/Norkart/Leaflet-MiniMap.git#v1.0.0',
+silly cache add: name, spec, args   [ 'minimap',
+silly cache add: name, spec, args     'git+https://github.com/Norkart/Leaflet-MiniMap.git#v1.0.0' ] ]
+verbose parsed url { protocol: 'githttps:',
+verbose parsed url   slashes: true,
+verbose parsed url   host: 'github.com',
+verbose parsed url   hostname: 'github.com',
+verbose parsed url   href: 'githttps://github.com/Norkart/Leaflet-MiniMap.git#v1.0.0',
+verbose parsed url   hash: '#v1.0.0',
+verbose parsed url   pathname: '/Norkart/Leaflet-MiniMap.git',
+verbose parsed url   path: '/Norkart/Leaflet-MiniMap.git' }
+verbose addRemoteGit [ 'https://github.com/Norkart/Leaflet-MiniMap.git', 'v1.0.0' ]
+verbose cache add [ 'osmtogeojson@^2.1.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'osmtogeojson@^2.1.0',
+silly cache add: name, spec, args   [ 'osmtogeojson@^2.1.0', null ] ]
+verbose parsed url { pathname: 'osmtogeojson@^2.1.0',
+verbose parsed url   path: 'osmtogeojson@^2.1.0',
+verbose parsed url   href: 'osmtogeojson@^2.1.0' }
+silly cache add: name, spec, args [ 'osmtogeojson', '^2.1.0', [ 'osmtogeojson', '^2.1.0' ] ]
+verbose parsed url { pathname: '^2.1.0', path: '^2.1.0', href: '^2.1.0' }
+verbose addNamed [ 'osmtogeojson', '^2.1.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'osmtogeojson', '^2.1.0' ]
+verbose cache add [ 'togeojson@^0.7.0', null ]
+silly cache add: name, spec, args [ undefined, 'togeojson@^0.7.0', [ 'togeojson@^0.7.0', null ] ]
+verbose parsed url { pathname: 'togeojson@^0.7.0',
+verbose parsed url   path: 'togeojson@^0.7.0',
+verbose parsed url   href: 'togeojson@^0.7.0' }
+silly cache add: name, spec, args [ 'togeojson', '^0.7.0', [ 'togeojson', '^0.7.0' ] ]
+verbose parsed url { pathname: '^0.7.0', path: '^0.7.0', href: '^0.7.0' }
+verbose addNamed [ 'togeojson', '^0.7.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'togeojson', '^0.7.0' ]
+verbose cache add [ 'togpx@^0.3.1', null ]
+silly cache add: name, spec, args [ undefined, 'togpx@^0.3.1', [ 'togpx@^0.3.1', null ] ]
+verbose parsed url { pathname: 'togpx@^0.3.1',
+verbose parsed url   path: 'togpx@^0.3.1',
+verbose parsed url   href: 'togpx@^0.3.1' }
+silly cache add: name, spec, args [ 'togpx', '^0.3.1', [ 'togpx', '^0.3.1' ] ]
+verbose parsed url { pathname: '^0.3.1', path: '^0.3.1', href: '^0.3.1' }
+verbose addNamed [ 'togpx', '^0.3.1' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'togpx', '^0.3.1' ]
+verbose cache add [ 'leaflet-editable@^0.5.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'leaflet-editable@^0.5.0',
+silly cache add: name, spec, args   [ 'leaflet-editable@^0.5.0', null ] ]
+verbose parsed url { pathname: 'leaflet-editable@^0.5.0',
+verbose parsed url   path: 'leaflet-editable@^0.5.0',
+verbose parsed url   href: 'leaflet-editable@^0.5.0' }
+silly cache add: name, spec, args [ 'leaflet-editable',
+silly cache add: name, spec, args   '^0.5.0',
+silly cache add: name, spec, args   [ 'leaflet-editable', '^0.5.0' ] ]
+verbose parsed url { pathname: '^0.5.0', path: '^0.5.0', href: '^0.5.0' }
+verbose addNamed [ 'leaflet-editable', '^0.5.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'leaflet-editable', '^0.5.0' ]
+verbose cache add [ 'chai@~1.7.2', null ]
+silly cache add: name, spec, args [ undefined, 'chai@~1.7.2', [ 'chai@~1.7.2', null ] ]
+verbose parsed url { pathname: 'chai@~1.7.2',
+verbose parsed url   path: 'chai@~1.7.2',
+verbose parsed url   href: 'chai@~1.7.2' }
+silly cache add: name, spec, args [ 'chai', '~1.7.2', [ 'chai', '~1.7.2' ] ]
+verbose parsed url { pathname: '~1.7.2', path: '~1.7.2', href: '~1.7.2' }
+verbose addNamed [ 'chai', '~1.7.2' ]
+verbose addNamed [ null, '>=1.7.2- <1.8.0-' ]
+silly name, range, hasData [ 'chai', '>=1.7.2- <1.8.0-', false ]
+verbose cache add [ 'grunt@^0.4.4', null ]
+silly cache add: name, spec, args [ undefined, 'grunt@^0.4.4', [ 'grunt@^0.4.4', null ] ]
+verbose parsed url { pathname: 'grunt@^0.4.4',
+verbose parsed url   path: 'grunt@^0.4.4',
+verbose parsed url   href: 'grunt@^0.4.4' }
+silly cache add: name, spec, args [ 'grunt', '^0.4.4', [ 'grunt', '^0.4.4' ] ]
+verbose parsed url { pathname: '^0.4.4', path: '^0.4.4', href: '^0.4.4' }
+verbose addNamed [ 'grunt', '^0.4.4' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'grunt', '^0.4.4' ]
+verbose cache add [ 'grunt-contrib-concat@^0.4.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'grunt-contrib-concat@^0.4.0',
+silly cache add: name, spec, args   [ 'grunt-contrib-concat@^0.4.0', null ] ]
+verbose parsed url { pathname: 'grunt-contrib-concat@^0.4.0',
+verbose parsed url   path: 'grunt-contrib-concat@^0.4.0',
+verbose parsed url   href: 'grunt-contrib-concat@^0.4.0' }
+silly cache add: name, spec, args [ 'grunt-contrib-concat',
+silly cache add: name, spec, args   '^0.4.0',
+silly cache add: name, spec, args   [ 'grunt-contrib-concat', '^0.4.0' ] ]
+verbose parsed url { pathname: '^0.4.0', path: '^0.4.0', href: '^0.4.0' }
+verbose addNamed [ 'grunt-contrib-concat', '^0.4.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'grunt-contrib-concat', '^0.4.0' ]
+verbose cache add [ 'grunt-contrib-copy@^0.5.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'grunt-contrib-copy@^0.5.0',
+silly cache add: name, spec, args   [ 'grunt-contrib-copy@^0.5.0', null ] ]
+verbose parsed url { pathname: 'grunt-contrib-copy@^0.5.0',
+verbose parsed url   path: 'grunt-contrib-copy@^0.5.0',
+verbose parsed url   href: 'grunt-contrib-copy@^0.5.0' }
+silly cache add: name, spec, args [ 'grunt-contrib-copy',
+silly cache add: name, spec, args   '^0.5.0',
+silly cache add: name, spec, args   [ 'grunt-contrib-copy', '^0.5.0' ] ]
+verbose parsed url { pathname: '^0.5.0', path: '^0.5.0', href: '^0.5.0' }
+verbose addNamed [ 'grunt-contrib-copy', '^0.5.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'grunt-contrib-copy', '^0.5.0' ]
+verbose cache add [ 'happen@~0.1.3', null ]
+silly cache add: name, spec, args [ undefined, 'happen@~0.1.3', [ 'happen@~0.1.3', null ] ]
+verbose parsed url { pathname: 'happen@~0.1.3',
+verbose parsed url   path: 'happen@~0.1.3',
+verbose parsed url   href: 'happen@~0.1.3' }
+silly cache add: name, spec, args [ 'happen', '~0.1.3', [ 'happen', '~0.1.3' ] ]
+verbose parsed url { pathname: '~0.1.3', path: '~0.1.3', href: '~0.1.3' }
+verbose addNamed [ 'happen', '~0.1.3' ]
+verbose addNamed [ null, '>=0.1.3- <0.2.0-' ]
+silly name, range, hasData [ 'happen', '>=0.1.3- <0.2.0-', false ]
+verbose cache add [ 'mocha@~1.12.0', null ]
+silly cache add: name, spec, args [ undefined, 'mocha@~1.12.0', [ 'mocha@~1.12.0', null ] ]
+verbose parsed url { pathname: 'mocha@~1.12.0',
+verbose parsed url   path: 'mocha@~1.12.0',
+verbose parsed url   href: 'mocha@~1.12.0' }
+silly cache add: name, spec, args [ 'mocha', '~1.12.0', [ 'mocha', '~1.12.0' ] ]
+verbose parsed url { pathname: '~1.12.0', path: '~1.12.0', href: '~1.12.0' }
+verbose addNamed [ 'mocha', '~1.12.0' ]
+verbose addNamed [ null, '>=1.12.0- <1.13.0-' ]
+silly name, range, hasData [ 'mocha', '>=1.12.0- <1.13.0-', false ]
+verbose cache add [ 'napa@^0.4.1', null ]
+silly cache add: name, spec, args [ undefined, 'napa@^0.4.1', [ 'napa@^0.4.1', null ] ]
+verbose parsed url { pathname: 'napa@^0.4.1',
+verbose parsed url   path: 'napa@^0.4.1',
+verbose parsed url   href: 'napa@^0.4.1' }
+silly cache add: name, spec, args [ 'napa', '^0.4.1', [ 'napa', '^0.4.1' ] ]
+verbose parsed url { pathname: '^0.4.1', path: '^0.4.1', href: '^0.4.1' }
+verbose addNamed [ 'napa', '^0.4.1' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'napa', '^0.4.1' ]
+verbose cache add [ 'optimist@~0.4.0', null ]
+silly cache add: name, spec, args [ undefined, 'optimist@~0.4.0', [ 'optimist@~0.4.0', null ] ]
+verbose parsed url { pathname: 'optimist@~0.4.0',
+verbose parsed url   path: 'optimist@~0.4.0',
+verbose parsed url   href: 'optimist@~0.4.0' }
+silly cache add: name, spec, args [ 'optimist', '~0.4.0', [ 'optimist', '~0.4.0' ] ]
+verbose parsed url { pathname: '~0.4.0', path: '~0.4.0', href: '~0.4.0' }
+verbose addNamed [ 'optimist', '~0.4.0' ]
+verbose addNamed [ null, '>=0.4.0- <0.5.0-' ]
+silly name, range, hasData [ 'optimist', '>=0.4.0- <0.5.0-', false ]
+verbose cache add [ 'sinon@^1.10.3', null ]
+silly cache add: name, spec, args [ undefined, 'sinon@^1.10.3', [ 'sinon@^1.10.3', null ] ]
+verbose parsed url { pathname: 'sinon@^1.10.3',
+verbose parsed url   path: 'sinon@^1.10.3',
+verbose parsed url   href: 'sinon@^1.10.3' }
+silly cache add: name, spec, args [ 'sinon', '^1.10.3', [ 'sinon', '^1.10.3' ] ]
+verbose parsed url { pathname: '^1.10.3', path: '^1.10.3', href: '^1.10.3' }
+verbose addNamed [ 'sinon', '^1.10.3' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'sinon', '^1.10.3' ]
+verbose cache add [ 'uglify-js@~2.2.3', null ]
+silly cache add: name, spec, args [ undefined, 'uglify-js@~2.2.3', [ 'uglify-js@~2.2.3', null ] ]
+verbose parsed url { pathname: 'uglify-js@~2.2.3',
+verbose parsed url   path: 'uglify-js@~2.2.3',
+verbose parsed url   href: 'uglify-js@~2.2.3' }
+silly cache add: name, spec, args [ 'uglify-js', '~2.2.3', [ 'uglify-js', '~2.2.3' ] ]
+verbose parsed url { pathname: '~2.2.3', path: '~2.2.3', href: '~2.2.3' }
+verbose addNamed [ 'uglify-js', '~2.2.3' ]
+verbose addNamed [ null, '>=2.2.3- <2.3.0-' ]
+silly name, range, hasData [ 'uglify-js', '>=2.2.3- <2.3.0-', false ]
+verbose mkdir done: /tmp/npm-1430383680639 755
+verbose raw, before any munging leaflet.markercluster
+verbose url resolving [ 'https://registry.npmjs.org/', './leaflet.markercluster' ]
+verbose url resolved https://registry.npmjs.org/leaflet.markercluster
+http GET https://registry.npmjs.org/leaflet.markercluster
+verbose raw, before any munging leaflet-draw
+verbose url resolving [ 'https://registry.npmjs.org/', './leaflet-draw' ]
+verbose url resolved https://registry.npmjs.org/leaflet-draw
+http GET https://registry.npmjs.org/leaflet-draw
+verbose raw, before any munging osmtogeojson
+verbose url resolving [ 'https://registry.npmjs.org/', './osmtogeojson' ]
+verbose url resolved https://registry.npmjs.org/osmtogeojson
+http GET https://registry.npmjs.org/osmtogeojson
+verbose raw, before any munging togeojson
+verbose url resolving [ 'https://registry.npmjs.org/', './togeojson' ]
+verbose url resolved https://registry.npmjs.org/togeojson
+http GET https://registry.npmjs.org/togeojson
+verbose raw, before any munging togpx
+verbose url resolving [ 'https://registry.npmjs.org/', './togpx' ]
+verbose url resolved https://registry.npmjs.org/togpx
+http GET https://registry.npmjs.org/togpx
+verbose raw, before any munging leaflet-editable
+verbose url resolving [ 'https://registry.npmjs.org/', './leaflet-editable' ]
+verbose url resolved https://registry.npmjs.org/leaflet-editable
+http GET https://registry.npmjs.org/leaflet-editable
+verbose raw, before any munging chai
+verbose url resolving [ 'https://registry.npmjs.org/', './chai' ]
+verbose url resolved https://registry.npmjs.org/chai
+http GET https://registry.npmjs.org/chai
+verbose raw, before any munging grunt
+verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+verbose url resolved https://registry.npmjs.org/grunt
+http GET https://registry.npmjs.org/grunt
+verbose raw, before any munging grunt-contrib-concat
+verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-concat' ]
+verbose url resolved https://registry.npmjs.org/grunt-contrib-concat
+http GET https://registry.npmjs.org/grunt-contrib-concat
+verbose raw, before any munging grunt-contrib-copy
+verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-copy' ]
+verbose url resolved https://registry.npmjs.org/grunt-contrib-copy
+http GET https://registry.npmjs.org/grunt-contrib-copy
+verbose raw, before any munging happen
+verbose url resolving [ 'https://registry.npmjs.org/', './happen' ]
+verbose url resolved https://registry.npmjs.org/happen
+http GET https://registry.npmjs.org/happen
+verbose raw, before any munging mocha
+verbose url resolving [ 'https://registry.npmjs.org/', './mocha' ]
+verbose url resolved https://registry.npmjs.org/mocha
+http GET https://registry.npmjs.org/mocha
+verbose raw, before any munging napa
+verbose url resolving [ 'https://registry.npmjs.org/', './napa' ]
+verbose url resolved https://registry.npmjs.org/napa
+http GET https://registry.npmjs.org/napa
+verbose raw, before any munging optimist
+verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+verbose url resolved https://registry.npmjs.org/optimist
+http GET https://registry.npmjs.org/optimist
+verbose raw, before any munging sinon
+verbose url resolving [ 'https://registry.npmjs.org/', './sinon' ]
+verbose url resolved https://registry.npmjs.org/sinon
+http GET https://registry.npmjs.org/sinon
+verbose raw, before any munging uglify-js
+verbose url resolving [ 'https://registry.npmjs.org/', './uglify-js' ]
+verbose url resolved https://registry.npmjs.org/uglify-js
+http GET https://registry.npmjs.org/uglify-js
+silly exec git "clone" "https://github.com/Leaflet/Leaflet.heat.git" "/tmp/npm-1430383680639/1430383680639-0.801109770545736"
+silly spawning [ 'git',
+silly spawning   [ 'clone',
+silly spawning     'https://github.com/Leaflet/Leaflet.heat.git',
+silly spawning     '/tmp/npm-1430383680639/1430383680639-0.801109770545736' ],
+silly spawning   null ]
+silly exec git "clone" "https://github.com/Leaflet/Leaflet.label.git" "/tmp/npm-1430383680639/1430383680642-0.38793378393165767"
+silly spawning [ 'git',
+silly spawning   [ 'clone',
+silly spawning     'https://github.com/Leaflet/Leaflet.label.git',
+silly spawning     '/tmp/npm-1430383680639/1430383680642-0.38793378393165767' ],
+silly spawning   null ]
+silly exec git "clone" "https://github.com/Norkart/Leaflet-MiniMap.git" "/tmp/npm-1430383680639/1430383680823-0.8151541606057435"
+silly spawning [ 'git',
+silly spawning   [ 'clone',
+silly spawning     'https://github.com/Norkart/Leaflet-MiniMap.git',
+silly spawning     '/tmp/npm-1430383680639/1430383680823-0.8151541606057435' ],
+silly spawning   null ]
+ERR! Error: failed to fetch from registry: csv2geojson
+ERR!     at /usr/share/npm/lib/utils/npm-registry-client/get.js:139:12
+ERR!     at cb (/usr/share/npm/lib/utils/npm-registry-client/request.js:31:9)
+ERR!     at Request._callback (/usr/share/npm/lib/utils/npm-registry-client/request.js:136:18)
+ERR!     at Request.callback (/usr/lib/nodejs/request/main.js:119:22)
+ERR!     at Request.<anonymous> (/usr/lib/nodejs/request/main.js:212:58)
+ERR!     at Request.emit (events.js:88:20)
+ERR!     at ClientRequest.<anonymous> (/usr/lib/nodejs/request/main.js:412:12)
+ERR!     at ClientRequest.g (events.js:156:14)
+ERR!     at ClientRequest.emit (events.js:67:17)
+ERR!     at HTTPParser.parserOnIncomingClient [as onIncoming] (http.js:1256:7)
+ERR! You may report this log at:
+ERR!     <http://bugs.debian.org/npm>
+ERR! or use
+ERR!     reportbug --attach /home/pi/dev/umapproject/Leaflet.Storage/npm-debug.log npm
+ERR! 
+ERR! System Linux 3.18.7-v7+
+ERR! command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+ERR! cwd /home/pi/dev/umapproject/Leaflet.Storage
+ERR! node -v v0.6.19
+ERR! npm -v 1.1.4
+ERR! message failed to fetch from registry: csv2geojson
+verbose exit [ 1, true ]
