@@ -1,4 +1,4 @@
-alert("Leaflet Storage");
+alert("C'est énervant cette petite fenêtre hein ? :)");
 L.Map.mergeOptions({
     base_layers: null,
     overlay_layers: null,
@@ -1036,6 +1036,7 @@ L.Storage.Map.include({
 
         var optionsFields = [
             'options.color',
+            'options.iconsize',
             'options.iconClass',
             'options.iconUrl',
             'options.smoothFactor',
@@ -1064,7 +1065,6 @@ L.Storage.Map.include({
 
         var popupFields = [
             'options.popupTemplate',
-			'options.popupPolice',
             'options.popupContentTemplate'
         ];
         builder = new L.S.FormBuilder(this, popupFields);

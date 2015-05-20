@@ -1,7 +1,6 @@
 L.Storage.Icon = L.DivIcon.extend({
     initialize: function(map, options) {
         this.map = map;
-        //var iconsize = this.feature.getIconSize();
         var default_options = {
             iconSize: null,  // Made in css
             //iconUrl: this.map.getDefaultOption('iconUrl'),
@@ -57,9 +56,11 @@ L.Storage.Icon = L.DivIcon.extend({
 L.Storage.Icon.Blank = L.Storage.Icon.extend({
 
     default_options: {
-        //iconAnchor: new L.Point(16, 30),
+        iconAnchor: new L.Point(13, 40),// Option de base
+        //Ce qu'il me faudrait mais qui ne fonctionne pas, avec width = this.feature.getIconSize() comme plus bas dans le createIcon
+        //iconAnchor: new L.point(width/2, width), 
         popupAnchor: new L.Point(0, -40),
-        labelAnchor: new L.Point(12, -20),
+        labelAnchor: new L.Point(0, -20),
         className: 'storage-blank-icon'
     },
 
@@ -82,16 +83,12 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
     },
 
     createIcon: function() {
-        //var width = this.feature.getIconSize();
-        //console.log("width ="+width);
         this.elements = {};
         this.elements.main = L.DomUtil.create('div');
         this.elements.container = L.DomUtil.create('div', 'icon_container2', this.elements.main);
         this.elements.arrow = L.DomUtil.create('div', 'icon_arrow', this.elements.main);
         this.elements.img = L.DomUtil.create('img', null, this.elements.container);
-        //this.elements.img.maxWidth = this.feature.getIconSize()+"px!important";
-        this.elements.img.style.width = this.feature.getIconSize()+"px";
-        //this.elements.img.maxWidth = this.feature["get"+"Icon"+"Size"]()+"%";
+        this.elements.img.style.width = this.feature.getIconSize()+"px"; //On récupère la taille de l'image pour fixer la width
         var src = this._getIconUrl('icon');
         if(src) {
             this.elements.img.src = src;
@@ -101,10 +98,8 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
             var offsetWidth = this.elements.img.offsetWidth;
             console.log("Width = "+width);
             console.log("Offsetwidth = "+offsetWidth);
-            //options = L.Util.extend({}, this.default_options, options);
         }
         this._setIconStyles(this.elements.main, 'icon');
-        //L.Storage.Icon.prototype.initialize.call(this, map, options);
         return this.elements.main;
     }
 
