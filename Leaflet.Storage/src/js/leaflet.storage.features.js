@@ -81,7 +81,7 @@ L.Storage.FeatureMixin = {
         var properties = [];
         for (var i in this.properties) {
             if (typeof this.properties[i] === 'object' ||
-                ['name', 'description', 'titlepolice', 'titlecolor', 'titlestyle', 'titleweight', 'titledecoration', 'descriptioncolor'].indexOf(i) !== -1) {continue;} //Deux éléments rajoutés pour la couleur du texte et la police
+                ['name', 'description', 'iconsize', 'titlefont', 'titlefontsize','titlecolor', 'titlestyle', 'titleweight', 'titledecoration', 'descriptionfont', 'descriptionfontsize','descriptioncolor', 'descriptionstyle', 'descriptionweight', 'descriptiondecoration'].indexOf(i) !== -1) {continue;} //Deux éléments rajoutés pour la couleur du texte et la police
             properties.push(['properties.' + i, {label: i}]);
         }
         // We always want name and description for now (properties management to come)
@@ -116,6 +116,19 @@ L.Storage.FeatureMixin = {
 
 	//Les rajouts ici se verrons dans le menu de droite
     appendEditFieldsets: function (container) {
+
+        /**********************************************************/
+        /*                                                        */ 
+        /*   RAJOUT                                               */
+        /*   Section de menu spéciale pour le titre de la popup   */
+        /*                                                        */ 
+        /**********************************************************/
+        /*var iconFields = [
+            'properties.iconsize'
+        ];
+        builder = new L.S.FormBuilder(this, iconFields);
+        var iconProperties = L.DomUtil.createFieldset(container, L._('Icon properties')); 
+        iconProperties.appendChild(builder.build());*/
 	
 		/**********************************************************/
 		/*                                                        */ 
@@ -124,8 +137,9 @@ L.Storage.FeatureMixin = {
 		/*                                                        */ 
 		/**********************************************************/
 		var titleFields = [
-			'properties.titlecolor',
-			'properties.titlepolice',
+			'properties.titlefont',
+            'properties.titlefontsize',
+            'properties.titlecolor',
 			'properties.titlestyle',
 			'properties.titleweight',
 			'properties.titledecoration'
@@ -142,7 +156,13 @@ L.Storage.FeatureMixin = {
 		/*                                                              */ 
 		/****************************************************************/
 		var descriptionFields = [
-			'properties.descriptioncolor'
+            'properties.descriptionfont',
+            'properties.descriptionfontsize',
+			'properties.descriptioncolor',
+            'properties.descriptionstyle',
+            'properties.descriptionweight',
+            'properties.descriptiondecoration'
+
 		];
 		builder = new L.S.FormBuilder(this, descriptionFields);
 		var descriptionProperties = L.DomUtil.createFieldset(container, L._('Description properties')); 
@@ -195,8 +215,12 @@ L.Storage.FeatureMixin = {
 	
     //RAJOUT
     //Fonction qui récupère la police à utiliser pour le titre de la popup
-    getDescriptionPolice: function () {
-        return this.properties.descriptionpolice || this.datalayer.options.descriptionpolice;
+    getDescriptionFont: function () {
+        return this.properties.descriptionfont || this.datalayer.options.descriptionfont;
+    },
+
+    getDescriptionFontSize: function () {
+        return this.properties.descriptionfontsize || this.datalayer.options.descriptionfontsize;
     },
     
     //RAJOUT
@@ -225,8 +249,14 @@ L.Storage.FeatureMixin = {
     
 	//RAJOUT
 	//Fonction qui récupère la police à utiliser pour le titre de la popup
-	getTitlePolice: function () {
-        return this.properties.titlepolice || this.datalayer.options.titlepolice;
+	getTitleFont: function () {
+        return this.properties.titlefont || this.datalayer.options.titlefont;
+    },
+
+    //RAJOUT
+    //Fonction qui récupère la taille de la police à utiliser pour le titre de la popup
+    getTitleFontSize: function () {
+        return this.properties.titlefontsize || this.datalayer.options.titlefontsize;
     },
 	
 	//RAJOUT
@@ -258,6 +288,12 @@ L.Storage.FeatureMixin = {
 	getDescriptionColor: function () {
 		return this.properties.descriptioncolor || this.datalayer.options.descriptioncolor;
 	},
+
+    //RAJOUT
+    //Fonction qui récupère la taille du marqueur
+    getIconSize: function () {
+        return this.properties.iconsize || this.datalayer.options.iconsize;
+    },
 
     hasPopupFooter: function () {
         if (L.Browser.ielt9) {
@@ -613,6 +649,7 @@ L.Storage.Marker = L.Marker.extend({
     getAdvancedOptions: function () {
         return [
             'properties._storage_options.color',
+            'properties.iconsize',
             'properties._storage_options.iconClass',
             'properties._storage_options.iconUrl',
             'properties._storage_options.zoomTo',
@@ -713,6 +750,7 @@ L.Storage.PathMixin = {
     getAdvancedOptions: function () {
         return [
             'properties._storage_options.color',
+            'properties._storage_options.iconsize',
             'properties._storage_options.opacity',
             'properties._storage_options.weight',
             'properties._storage_options.smoothFactor',

@@ -442,7 +442,7 @@ L.S.ElementHelper.PopupTemplate = L.S.ElementHelper.SelectAbstract.extend({
 /*---------------------------------------------------------------------------------------------*/
 
 //Menu de choix de la police du titre de la popup
-L.S.ElementHelper.titlePopupPolice = L.S.ElementHelper.SelectAbstract.extend({
+L.S.ElementHelper.umapFont = L.S.ElementHelper.SelectAbstract.extend({
 	
     selectOptions: [
         [undefined, L._('Sans-serif')],
@@ -470,8 +470,32 @@ L.S.ElementHelper.titlePopupPolice = L.S.ElementHelper.SelectAbstract.extend({
 
 });
 
+//Menu de choix de la police du titre de la popup
+L.S.ElementHelper.umapFontSize = L.S.ElementHelper.SelectAbstract.extend({
+    
+    selectOptions: [
+        ['10', L._('10')],
+        [undefined, L._('12')],
+        ['14', L._('14')],
+        ['16', L._('16')],
+        ['18', L._('18')],
+        ['20', L._('20')],
+        ['22', L._('22')],
+        ['24', L._('24')],
+        ['26', L._('26')],
+        ['28', L._('28')],
+        ['30', L._('30')],
+        ['35', L._('35')],
+        ['40', L._('40')],
+        ['45', L._('45')],
+        ['50', L._('50')]
+
+    ]
+
+});
+
 //Menu de choix pour le style de la police du titre de la popup (Normal, Italic, Oblique)
-L.S.ElementHelper.titlePopupStyle = L.S.ElementHelper.SelectAbstract.extend({
+L.S.ElementHelper.umapStyle = L.S.ElementHelper.SelectAbstract.extend({
 	
     selectOptions: [
         [undefined, L._('Normal')],
@@ -481,7 +505,7 @@ L.S.ElementHelper.titlePopupStyle = L.S.ElementHelper.SelectAbstract.extend({
 });
 
 //Menu de choix pour le poids de la police du titre de la popup (Normal, Bold)
-L.S.ElementHelper.titlePopupWeight = L.S.ElementHelper.SelectAbstract.extend({
+L.S.ElementHelper.umapWeight = L.S.ElementHelper.SelectAbstract.extend({
 	
     selectOptions: [
         [undefined, L._('Normal')],
@@ -491,11 +515,30 @@ L.S.ElementHelper.titlePopupWeight = L.S.ElementHelper.SelectAbstract.extend({
 });
 
 //Menu de choix pour souligner la police du titre de la popup (Normal, Souligné)
-L.S.ElementHelper.titlePopupUnderline = L.S.ElementHelper.SelectAbstract.extend({
+L.S.ElementHelper.umapUnderline = L.S.ElementHelper.SelectAbstract.extend({
 	
     selectOptions: [
         [undefined, L._('Normal')],
         ['underline', L._('Underline')]
+    ]
+
+});
+
+//Menu de choix de la police du titre de la popup
+L.S.ElementHelper.umapIconSize = L.S.ElementHelper.SelectAbstract.extend({
+    
+    selectOptions: [
+        ['5', L._('5')],
+        ['10', L._('10')],
+        ['15', L._('15')],
+        ['20', L._('20')],
+        ['25', L._('25')],
+        ['30', L._('30')],
+        ['35', L._('35')],
+        ['40', L._('40')],
+        ['45', L._('45')],
+        ['50', L._('50')],
+        ['55', L._('55')]
     ]
 
 });
@@ -856,14 +899,21 @@ L.Storage.FormBuilder = L.Class.extend({
         name: {label: L._('Name')},
         description: {label: L._('Description'), handler: 'Textarea', helpEntries: 'textFormatting'},
 		//RAJOUT de forms pour les menus (Title properties, Description properties)
-		titlepolice: {handler: 'titlePopupPolice', label: L._('Police for popup title')},
+		titlefont: {handler: 'umapFont', label: L._('Font for popup title')},
+        titlefontsize: {handler: 'umapFontSize', label: L._('Font size for popup title')},
 		titlecolor: {handler: 'ColorPicker', label: L._('Color of the title of the popup'), helpText: L._('Must be a CSS valid name (eg.: DarkBlue or #123456)')},
-		titlestyle: {handler: 'titlePopupStyle', label: L._('Style of the popup title')},
-		titleweight: {handler: 'titlePopupWeight', label: L._('Weight of the popup title')},
-		titledecoration: {handler: 'titlePopupUnderline', label: L._('Underline popup title')},
+		titlestyle: {handler: 'umapStyle', label: L._('Style of the popup title')},
+		titleweight: {handler: 'umapWeight', label: L._('Weight of the popup title')},
+		titledecoration: {handler: 'umapUnderline', label: L._('Underline popup title')},
+        descriptionfont: {handler: 'umapFont', label: L._('Police for popup description')},
+        descriptionfontsize: {handler: 'umapFontSize', label: L._('Font size for popup description')},
 		descriptioncolor: {handler: 'ColorPicker', label: L._('Color of the description'), helpText: L._('Must be a CSS valid name (eg.: DarkBlue or #123456)')},
+        descriptionstyle: {handler: 'umapStyle', label: L._('Style of the popup description')},
+        descriptionweight: {handler: 'umapWeight', label: L._('Weight of the popup description')},
+        descriptiondecoration: {handler: 'umapUnderline', label: L._('Underline popup description')},
 		//Fin de RAJOUT
         color: {handler: 'ColorPicker', label: L._('Color'), helpText: L._('Must be a CSS valid name (eg.: DarkBlue or #123456)')},
+        iconsize: {handler: 'umapIconSize', label: L._('Size of markers')}, //Rajout
         opacity: {label: L._('opacity'), helpText: L._('Opacity, from 0.1 to 1.0 (opaque).')},
         stroke: {handler: 'NullableBoolean', label: L._('stroke'), helpText: L._('Whether to display or not the Polygon path.')},
         weight: {label: L._('weight'), helpText: L._('Path weight in pixels. From 0 to 10.')},

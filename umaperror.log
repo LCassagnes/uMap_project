@@ -1,0 +1,46 @@
+Internal Server Error: /login/openstreetmap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/usr/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/usr/local/lib/python2.7/site-packages/social/strategies/base.py", line 62, in start
+    return self.redirect(self.backend.auth_url())
+  File "/usr/local/lib/python2.7/site-packages/social/backends/oauth.py", line 97, in auth_url
+    token = self.set_unauthorized_token()
+  File "/usr/local/lib/python2.7/site-packages/social/backends/oauth.py", line 156, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/usr/local/lib/python2.7/site-packages/social/backends/oauth.py", line 175, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD)
+  File "/usr/local/lib/python2.7/site-packages/social/backends/base.py", line 191, in request
+    response.raise_for_status()
+  File "/usr/local/lib/python2.7/site-packages/requests/models.py", line 851, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 500 Server Error: Internal Server Error
+Internal Server Error: /login/openstreetmap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/social/apps/django_app/utils.py", line 45, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/social/apps/django_app/views.py", line 12, in auth
+    return do_auth(request.social_strategy, redirect_name=REDIRECT_FIELD_NAME)
+  File "/usr/local/lib/python2.7/site-packages/social/actions.py", line 25, in do_auth
+    return strategy.start()
+  File "/usr/local/lib/python2.7/site-packages/social/strategies/base.py", line 62, in start
+    return self.redirect(self.backend.auth_url())
+  File "/usr/local/lib/python2.7/site-packages/social/backends/oauth.py", line 97, in auth_url
+    token = self.set_unauthorized_token()
+  File "/usr/local/lib/python2.7/site-packages/social/backends/oauth.py", line 156, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/usr/local/lib/python2.7/site-packages/social/backends/oauth.py", line 175, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD)
+  File "/usr/local/lib/python2.7/site-packages/social/backends/base.py", line 191, in request
+    response.raise_for_status()
+  File "/usr/local/lib/python2.7/site-packages/requests/models.py", line 851, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 500 Server Error: Internal Server Error

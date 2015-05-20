@@ -1,8 +1,7 @@
-//alert("Version en développement");
-
 L.Storage.Icon = L.DivIcon.extend({
     initialize: function(map, options) {
         this.map = map;
+        //var iconsize = this.feature.getIconSize();
         var default_options = {
             iconSize: null,  // Made in css
             //iconUrl: this.map.getDefaultOption('iconUrl'),
@@ -15,7 +14,8 @@ L.Storage.Icon = L.DivIcon.extend({
             this.options.className += ' readonly';
         }
     },
-/*
+
+    /*
     _getIconUrl: function (name) {
         var url;
         if(this.feature && this.feature._getIconUrl(name)) {
@@ -55,8 +55,9 @@ L.Storage.Icon = L.DivIcon.extend({
 /*          															  */
 /*------------------------------------------------------------------------*/
 L.Storage.Icon.Blank = L.Storage.Icon.extend({
+
     default_options: {
-        iconAnchor: new L.Point(16, 30),
+        //iconAnchor: new L.Point(16, 30),
         popupAnchor: new L.Point(0, -40),
         labelAnchor: new L.Point(12, -20),
         className: 'storage-blank-icon'
@@ -64,7 +65,8 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
 
     initialize: function(map, options) {
         options = L.Util.extend({}, this.default_options, options);
-        //console.log(options);
+        console.log("Options : "+options);
+        console.log("Default options : "+this.default_options);
         L.Storage.Icon.prototype.initialize.call(this, map, options);
     },
 	
@@ -80,17 +82,32 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
     },
 
     createIcon: function() {
+        //var width = this.feature.getIconSize();
+        //console.log("width ="+width);
         this.elements = {};
         this.elements.main = L.DomUtil.create('div');
         this.elements.container = L.DomUtil.create('div', 'icon_container2', this.elements.main);
         this.elements.arrow = L.DomUtil.create('div', 'icon_arrow', this.elements.main);
         this.elements.img = L.DomUtil.create('img', null, this.elements.container);
-        //this.elements.img.style.maxWidth = this.feature.getOption('maxwidth');
+        //this.elements.img.maxWidth = this.feature.getIconSize()+"px!important";
+        this.elements.img.style.width = this.feature.getIconSize()+"px";
+        //this.elements.img.maxWidth = this.feature["get"+"Icon"+"Size"]()+"%";
         var src = this._getIconUrl('icon');
         if(src) {
             this.elements.img.src = src;
+            //this.elements.img.maxWidth = this.feature.getIconSize()+"px!important";
+            //this.elements.img.style.maxWidth = this.feature.getIconSize()+"px!important";
+            var width = this.feature.getIconSize();
+            console.log("Width = "+width);
+            default_options: {
+                iconAnchor: new L.Point(width/2, width/2);
+                popupAnchor: new L.Point(0, -width);
+            }
+            //options = L.Util.extend({}, this.default_options, options);
+            console.log(this.elements.img.style.width);
         }
         this._setIconStyles(this.elements.main, 'icon');
+        //L.Storage.Icon.prototype.initialize.call(this, map, options);
         return this.elements.main;
     }
 

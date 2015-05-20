@@ -963,7 +963,8 @@ a.storage-control-text {
 
 .icon_container2 img {
 	vertical-align: middle;
-	max-width: 50px!important; //largeur maximale de l'image dans le marqueur
+    position: center;
+	max-width: 40px; /*largeur maximale de l'image du marqueur*/
 }
 
 

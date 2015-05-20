@@ -709,8 +709,17 @@ L.Storage.DataLayer = L.Class.extend({
 		/*          															        */
 		/*------------------------------------------------------------------------------*/
 		
+        /*var iconFields = [
+            'options.iconsize'
+        ];
+        builder = new L.S.FormBuilder(this, iconFields);
+        var iconProperties = L.DomUtil.createFieldset(container, L._('Icon properties')); 
+        iconProperties.appendChild(builder.build());*/
+
+
 		var titleFields = [
-			'options.titlepolice',
+			'options.titlefont',
+            'options.titlefontsize',
 			'options.titlecolor',
 			'options.titlestyle',
 			'options.titleweight',
@@ -726,7 +735,12 @@ L.Storage.DataLayer = L.Class.extend({
 		
 		
 		var descriptionFields = [
-			'options.descriptioncolor'
+			'options.descriptionfont',
+            'options.descriptionfontsize',
+            'options.descriptioncolor',
+            'options.descriptionstyle',
+            'options.descriptionweight',
+            'options.descriptiondecoration'
 		];
 		builder = new L.S.FormBuilder(this, descriptionFields);
 		var descriptionProperties = L.DomUtil.createFieldset(container, L._('Description properties')); 
@@ -734,6 +748,7 @@ L.Storage.DataLayer = L.Class.extend({
 		
         var optionsFields = [
             'options.color',
+            'options.iconsize',
             'options.iconClass',
             'options.iconUrl',
             'options.smoothFactor',

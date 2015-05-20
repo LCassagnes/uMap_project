@@ -25,44 +25,25 @@ L.S.Popup = L.Popup.extend({
 	/*                                                                       */
 	/*-----------------------------------------------------------------------*/
     renderTitle: function () {
-		var title;
-        if (this.feature.getDisplayName()) {
-            title = L.DomUtil.create('h1', 'popup-title'); // create a h3 title with a class "popup-title"
-            title.innerHTML = L.Util.escapeHTML(this.feature.getDisplayName());
-            //Méthode simple, il y a mieux
-			/*title.style.color = this.feature.getTitleColor();
-			title.style.fontFamily = this.feature.getTitlePolice();
-			title.style.fontStyle = this.feature.getTitleStyle();
-			title.style.fontWeight = this.feature.getTitleWeight();
-			title.style.textDecoration = this.feature.getTitleDecoration();*/
+		//var title;
+        //if (this.feature.getDisplayName()) {
+            //title = L.DomUtil.create('h1', 'popup-title'); // create a h3 title with a class "popup-title"
+            //title.innerHTML = L.Util.escapeHTML(this.feature.getDisplayName());
 
-            return this.styleNode(title, "Title");
-        }
+            //return this.styleNode(title, "Title");
+        //}
 	},
 
     styleNode: function (node, property) {
             node.style.color = this.feature["get"+property+"Color"]();
-            node.style.fontFamily = this.feature["get"+property+"Police"]();
+            node.style.fontFamily = this.feature["get"+property+"Font"]();
+            node.style.fontSize = this.feature["get"+property+"FontSize"]()+"px";
             node.style.fontStyle = this.feature["get"+property+"Style"]();
             node.style.fontWeight = this.feature["get"+property+"Weight"]();
             node.style.textDecoration = this.feature["get"+property+"Decoration"]();
 
             return node;
     },
-	
-	//Essai non fonctionnel pour réaliser les mêmes modifications que sur le titre
-	renderDescription: function () {
-		var description;
-        if (this.feature.getDescription()) {
-            description.innerHTML = L.Util.escapeHTML(this.feature.getDescription());
-			description.style.color = this.feature.getDescriptionColor();
-			/*title.style.fontFamily = this.feature.getTitlePolice();
-			title.style.fontStyle = this.feature.getTitleStyle();
-			title.style.fontWeight = this.feature.getTitleWeight();
-			title.style.textDecoration = this.feature.getTitleDecoration();*/
-        }
-        return description;
-	},
 
     renderBody: function () {
         var template = this.feature.getOption('popupContentTemplate'),
@@ -84,9 +65,8 @@ L.S.Popup = L.Popup.extend({
             content = L.Util.greedyTemplate(template, properties);
         }
         content = L.Util.toHTML(content);
-        console.log(content);
+        //console.log(content);
         container.innerHTML = content;
-        //container.style.color = this.feature.getDescriptionColor();
         container = this.styleNode(container, "Description");
         var els = container.querySelectorAll('img,iframe');
         for (var i = 0; i < els.length; i++) {
@@ -133,6 +113,7 @@ L.S.Popup = L.Popup.extend({
     format: function () {
         var title = this.renderTitle();
         if (title) {
+            styleNode(name, "Title");
             this.container.appendChild(title);
         }
         var body = this.renderBody();
