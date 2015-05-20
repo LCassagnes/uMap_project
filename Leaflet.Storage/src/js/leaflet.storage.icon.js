@@ -98,13 +98,10 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
             //this.elements.img.maxWidth = this.feature.getIconSize()+"px!important";
             //this.elements.img.style.maxWidth = this.feature.getIconSize()+"px!important";
             var width = this.feature.getIconSize();
+            var offsetWidth = this.elements.img.offsetWidth;
             console.log("Width = "+width);
-            default_options: {
-                iconAnchor: new L.Point(width/2, width/2);
-                popupAnchor: new L.Point(0, -width);
-            }
+            console.log("Offsetwidth = "+offsetWidth);
             //options = L.Util.extend({}, this.default_options, options);
-            console.log(this.elements.img.style.width);
         }
         this._setIconStyles(this.elements.main, 'icon');
         //L.Storage.Icon.prototype.initialize.call(this, map, options);
