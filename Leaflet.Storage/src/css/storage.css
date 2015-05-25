@@ -900,7 +900,7 @@ a.storage-control-text {
     position: relative;
     width: 0;
     opacity: 0.9;
-    box-shadow: 4px 8px 6px -3px black;*/
+    box-shadow: 4px 8px 6px -3px black;
 }
 .storage-drop-icon .icon_arrow {
     border-left: 10px solid transparent;

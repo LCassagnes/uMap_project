@@ -66,8 +66,16 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
 
     initialize: function(map, options) {
         options = L.Util.extend({}, this.default_options, options);
-        console.log("Options : "+options);
-        console.log("Default options : "+this.default_options);
+        console.log("Options : ",this.options);
+        console.log("Default options : ",this.default_options);
+        console.log("Features : ",this);
+        console.log("getIconSize : ",options.feature.getIconSize());
+        var iconsize = options.feature.getIconSize();
+        if (iconsize) {
+            console.log("IconSize : ",iconsize);
+            options.iconAnchor = new L.Point(iconsize/2, (iconsize/2)+8);
+            options.popupAnchor = new L.Point(0, -1*(iconsize/2+5));
+        }
         L.Storage.Icon.prototype.initialize.call(this, map, options);
     },
 	
@@ -92,12 +100,6 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
         var src = this._getIconUrl('icon');
         if(src) {
             this.elements.img.src = src;
-            //this.elements.img.maxWidth = this.feature.getIconSize()+"px!important";
-            //this.elements.img.style.maxWidth = this.feature.getIconSize()+"px!important";
-            var width = this.feature.getIconSize();
-            var offsetWidth = this.elements.img.offsetWidth;
-            console.log("Width = "+width);
-            console.log("Offsetwidth = "+offsetWidth);
         }
         this._setIconStyles(this.elements.main, 'icon');
         return this.elements.main;

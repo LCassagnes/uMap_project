@@ -1,4 +1,4 @@
-alert("C'est énervant cette petite fenêtre hein ? :)");
+//alert("C'est énervant cette petite fenêtre hein ? :)");
 L.Map.mergeOptions({
     base_layers: null,
     overlay_layers: null,

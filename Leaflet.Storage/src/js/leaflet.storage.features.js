@@ -292,7 +292,7 @@ L.Storage.FeatureMixin = {
     //RAJOUT
     //Fonction qui récupère la taille du marqueur
     getIconSize: function () {
-        return this.properties.iconsize || this.datalayer.options.iconsize;
+        return this.properties.iconsize || this.datalayer && this.datalayer.options.iconsize || undefined;
     },
 
     hasPopupFooter: function () {
