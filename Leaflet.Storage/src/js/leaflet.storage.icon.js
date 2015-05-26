@@ -70,11 +70,12 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
         console.log("Default options : ",this.default_options);
         console.log("Features : ",this);
         console.log("getIconSize : ",options.feature.getIconSize());
-        var iconsize = options.feature.getIconSize();
+        
+        var iconsize = options.feature.getIconSize(); //Récupération de la valeur d'iconsize
         if (iconsize) {
-            console.log("IconSize : ",iconsize);
-            options.iconAnchor = new L.Point(iconsize/2, (iconsize/2)+8);
-            options.popupAnchor = new L.Point(0, -1*(iconsize/2+5));
+            console.log("IconSize : ",iconsize); //Log de debug en console
+            options.iconAnchor = new L.Point(iconsize/2, (iconsize/2)+8); //Calcul de la nouvelle iconAnchor
+            options.popupAnchor = new L.Point(0, -1*(iconsize/2+8)); //Calcul de la nouvelle popupAnchor
         }
         L.Storage.Icon.prototype.initialize.call(this, map, options);
     },
