@@ -13,8 +13,7 @@ L.Storage.Icon = L.DivIcon.extend({
             this.options.className += ' readonly';
         }
     },
-
-    /*
+    
     _getIconUrl: function (name) {
         var url;
         if(this.feature && this.feature._getIconUrl(name)) {
@@ -24,7 +23,7 @@ L.Storage.Icon = L.DivIcon.extend({
             url = this.options[name + 'Url'];
         }
         return this.formatUrl(url, this.feature);
-    },*/
+    },
 
     _getColor: function () {
         var color;
@@ -56,9 +55,7 @@ L.Storage.Icon = L.DivIcon.extend({
 L.Storage.Icon.Blank = L.Storage.Icon.extend({
 
     default_options: {
-        iconAnchor: new L.Point(13, 40),// Option de base
-        //Ce qu'il me faudrait mais qui ne fonctionne pas, avec width = this.feature.getIconSize() comme plus bas dans le createIcon
-        //iconAnchor: new L.point(width/2, width), 
+        iconAnchor: new L.Point(16, 40),
         popupAnchor: new L.Point(0, -40),
         labelAnchor: new L.Point(0, -20),
         className: 'storage-blank-icon'
@@ -66,6 +63,7 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
 
     initialize: function(map, options) {
         options = L.Util.extend({}, this.default_options, options);
+        //Affichage de debug en console Javascript
         console.log("Options : ",this.options);
         console.log("Default options : ",this.default_options);
         console.log("Features : ",this);
@@ -78,17 +76,6 @@ L.Storage.Icon.Blank = L.Storage.Icon.extend({
             options.popupAnchor = new L.Point(0, -1*(iconsize/2+8)); //Calcul de la nouvelle popupAnchor
         }
         L.Storage.Icon.prototype.initialize.call(this, map, options);
-    },
-	
-	_getIconUrl: function (name) {
-        var url;
-        if(this.feature && this.feature._getIconUrl(name)) {
-            url = this.feature._getIconUrl(name);
-        }
-        else {
-            url = this.options[name + 'Url'];
-        }
-        return this.formatUrl(url, this.feature);
     },
 
     createIcon: function() {
@@ -130,17 +117,6 @@ L.Storage.Icon.Default = L.Storage.Icon.extend({
         options = L.Util.extend({}, this.default_options, options);
         L.Storage.Icon.prototype.initialize.call(this, map, options);
     },
-	
-	_getIconUrl: function (name) {
-        var url;
-        if(this.feature && this.feature._getIconUrl(name)) {
-            url = this.feature._getIconUrl(name);
-        }
-        else {
-            url = this.options[name + 'Url'];
-        }
-        return this.formatUrl(url, this.feature);
-	},
 
     _setColor: function() {
         var color = this._getColor();
@@ -183,17 +159,6 @@ L.Storage.Icon.Circle = L.Storage.Icon.extend({
         L.Storage.Icon.prototype.initialize.call(this, map, options);
 
     },
-	
-	_getIconUrl: function (name) {
-        var url;
-        if(this.feature && this.feature._getIconUrl(name)) {
-            url = this.feature._getIconUrl(name);
-        }
-        else {
-            url = this.options[name + 'Url'];
-        }
-        return this.formatUrl(url, this.feature);
-	},
 
     _setColor: function() {
         this.elements.main.style.backgroundColor = this._getColor();
